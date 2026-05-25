@@ -14,3 +14,6 @@ public class Spike {
         return bounds;
     }
 }
+// Team Member 1 — Hazard Logic:
+// This class represents dangerous spike areas that cause Game Over
+// when the player touches them.
