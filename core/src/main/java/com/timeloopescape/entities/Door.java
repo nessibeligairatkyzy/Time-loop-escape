@@ -42,3 +42,5 @@ public class Door implements Observer {
         return bounds;
     }
 }
+// Team Member 1 — Observer Pattern Observer:
+// Door reacts to switch notifications and opens when the switch is activated.
