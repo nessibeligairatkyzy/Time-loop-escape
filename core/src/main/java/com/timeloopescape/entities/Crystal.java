@@ -58,3 +58,6 @@ public class Crystal {
         texture.dispose();
     }
 }
+// Team Member 1 — Collectible Item Logic:
+// This class represents time crystals collected by Mira.
+// Crystals use a floating animation and disappear after collection.

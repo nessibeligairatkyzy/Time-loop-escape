@@ -31,3 +31,6 @@ public class ExitPortal {
         return bounds;
     }
 }
+// Team Member 1 — Portal Logic:
+// This class represents the exit portal, including its visual animation
+// and collision bounds for level completion.

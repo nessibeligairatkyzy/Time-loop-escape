@@ -18,6 +18,7 @@ import com.timeloopescape.entities.Player;
 import com.timeloopescape.entities.Switch;
 import com.badlogic.gdx.math.Rectangle;
 import com.timeloopescape.entities.Echo;
+import com.timeloopescape.entities.EchoFactory;
 
 public class GameScreen implements Screen {
     private static int savedLevel = 1;
@@ -124,7 +125,7 @@ public class GameScreen implements Screen {
             };
 
         } else if (level == 2) {
-            echo = new Echo(100, 110, 900, 310, "ACTIVATOR");
+            echo = EchoFactory.createActivatorEcho();
             timer = 35f;
 
             player = new Player(80, 110);
@@ -154,7 +155,7 @@ public class GameScreen implements Screen {
             };
 
         } else if (level == 3) {
-            echo = new Echo(900, 390, 900, 390, "GUARDIAN");
+            echo = EchoFactory.createGuardianEcho();
             timer = 40f;
 
             player = new Player(70, 110);
@@ -541,3 +542,7 @@ public class GameScreen implements Screen {
 
     }
 }
+// Team Member 1 Айзада— Gameplay/Core Logic:
+// This class controls the main gameplay process, including the level system,
+// timer, crystals, hazards, Echo mechanics, switch-door interaction,
+// portal escape logic, Game Over, and Level Complete states.

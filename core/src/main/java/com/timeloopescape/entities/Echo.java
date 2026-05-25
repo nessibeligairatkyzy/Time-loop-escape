@@ -77,3 +77,7 @@ public class Echo {
         texture.dispose();
     }
 }
+// Team Member 1 — Echo Mechanic:
+// This class represents Mira's time clone.
+// Echoes support the player through role-based actions such as
+// activating or protecting important time mechanisms.
