@@ -14,3 +14,6 @@ public class Platform {
         return bounds;
     }
 }
+// Team Member 1 — Platform Logic:
+// This class represents platform collision zones used for jumping
+// and level navigation.
