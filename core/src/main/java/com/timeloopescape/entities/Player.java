@@ -163,3 +163,6 @@ public class Player {
         footstepSound.dispose();
     }
 }
+// Team Member 1 — Player Mechanics:
+// This class handles Mira's movement, jumping, direction flipping,
+// animation texture switching, collision bounds, and player sound effects.
