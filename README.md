@@ -129,7 +129,7 @@ The game includes three levels, interactive objects, sound effects, timer, menu 
 
 This project was created by a team of two students.
 
-### Team Member 1 — Gameplay & Core Logic Developer
+### Aizada — Gameplay & Core Logic Developer
 
 Responsibilities:
 - Implemented player movement, jumping, and direction control
@@ -140,7 +140,7 @@ Responsibilities:
 - Added spike hazards and level obstacles
 - Implemented the Observer Pattern for the switch-door system
 
-### Team Member 2 — UI, Visual & Sound Developer
+### Nesibeli — UI, Visual & Sound Developer
 
 Responsibilities:
 - Designed and implemented the main menu
