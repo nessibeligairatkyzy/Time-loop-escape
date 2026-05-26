@@ -12,6 +12,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.timeloopescape.TimeLoopEscapeGame;
 
+// Main menu screen — handles all menu states and button interactions
 public class MainMenuScreen implements Screen {
 
     private final TimeLoopEscapeGame game;
@@ -21,6 +22,7 @@ public class MainMenuScreen implements Screen {
     private BitmapFont font;
     private Sound clickSound;
 
+    // Button positions and sizes (coordinates based on 1280x720 screen)
     private final float buttonX = 488;
     private final float buttonWidth = 305;
     private final float buttonHeight = 42;
@@ -33,10 +35,8 @@ public class MainMenuScreen implements Screen {
     private final float backButtonWidth = 300;
     private final float backButtonHeight = 50;
 
+    // 0 = main menu, 1 = settings, 2 = levels
     private int menuState = 0;
-    // 0 = main menu
-    // 1 = settings
-    // 2 = levels
 
     public MainMenuScreen(TimeLoopEscapeGame game) {
         this.game = game;
@@ -44,6 +44,7 @@ public class MainMenuScreen implements Screen {
 
     @Override
     public void show() {
+        // Load assets when screen becomes active
         background = new Texture(Gdx.files.internal("menu/menu_background.png"));
         shapeRenderer = new ShapeRenderer();
         font = new BitmapFont();
@@ -79,10 +80,7 @@ public class MainMenuScreen implements Screen {
 
         if (menuState == 0) {
             drawHoverFrame();
-            handleMainMenuInput();if (menuState == 0) {
-                drawHoverFrame();
-                handleMainMenuInput();
-            }
+            handleMainMenuInput();
         } else {
             drawInfoPanel();
             handleSubMenuInput();
@@ -95,9 +93,8 @@ public class MainMenuScreen implements Screen {
         game.batch.end();
     }
 
-
-
     private void drawHoverFrame() {
+        // Highlight button outline when mouse hovers over it
         int mouseX = Gdx.input.getX();
         int mouseY = Gdx.graphics.getHeight() - Gdx.input.getY();
 
@@ -116,6 +113,7 @@ public class MainMenuScreen implements Screen {
     }
 
     private void handleMainMenuInput() {
+        // Handle button clicks and navigate to correct screen
         if (Gdx.input.isKeyJustPressed(Input.Keys.ESCAPE)) {
             clickSound.play();
             Gdx.app.exit();
@@ -156,6 +154,7 @@ public class MainMenuScreen implements Screen {
     }
 
     private void drawInfoPanel() {
+        // Draw semi-transparent overlay panel for settings/levels screens
         int mouseX = Gdx.input.getX();
         int mouseY = Gdx.graphics.getHeight() - Gdx.input.getY();
 
@@ -251,6 +250,7 @@ public class MainMenuScreen implements Screen {
         }
     }
 
+    // Check if mouse position is inside button bounds
     private boolean isInside(float mouseX, float mouseY, float x, float y, float width, float height) {
         return mouseX >= x && mouseX <= x + width && mouseY >= y && mouseY <= y + height;
     }
